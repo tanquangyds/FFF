@@ -1,0 +1,409 @@
+/* header */
+
+.header__nav-sub {
+  background-color: var(--primary-color);
+  justify-content: space-between;
+  color: white;
+  height: var(--nav-sub-height);
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.sub__left {
+  display: flex;
+  align-items: center;
+}
+
+.sub__list {
+  display: flex;
+}
+
+.sub_left-item {
+  padding-right: 20px;
+}
+
+.sub_left-item:hover {
+  color: rgba(254, 254, 254, 0.7);
+}
+
+.sub-icon {
+  padding-right: 5px;
+}
+
+.sub__search {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  max-width: 130px;
+  height: 80%;
+  border: 1px solid white;
+  border-radius: 3px;
+}
+
+.search__input {
+  width: 90%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: white;
+}
+
+.search__input::placeholder {
+  padding-left: 5px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.search-button {
+  outline: none;
+}
+
+.search__icon {
+  padding: 5px;
+}
+
+.sub__contact {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.sub__socials {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.socials-icon {
+  padding-left: 10px;
+}
+
+.socials-icon:hover {
+  color: rgba(254, 254, 254, 0.7);
+}
+
+/* nav__main */
+
+.header__nav-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--nav-main-height);
+}
+
+.logo {
+  padding-right: 50px;
+}
+
+.nav-main__list {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.nav-main__item {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.nav-main__link {
+  display: block;
+  padding: 5px;
+}
+
+.nav-main__link:hover {
+  background-color: rgba(117, 179, 37, 0.2);
+  border-radius: 3px;
+}
+
+.cart {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  padding-left: 50px;
+  cursor: pointer;
+}
+
+/* Nav Mobile-tablet */
+
+.sub__search-tablet {
+  flex: 1;
+  display: none;
+  align-items: center;
+  margin-left: auto;
+  height: 50%;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.search__input-tablet {
+  height: 100%;
+  outline: none;
+  border: none;
+  flex: 1;
+}
+
+.search__input-tablet::placeholder {
+  padding-left: 10px;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+}
+
+.search-button-tablet {
+  outline: none;
+}
+
+.search__icon-tablet {
+  color: var(--primary-color);
+  font-size: 2rem;
+  padding: 10px;
+}
+
+.nav__mobile-btn {
+  font-size: 4em;
+  color: var(--primary-color);
+  display: none;
+  margin-left: 20px;
+}
+
+.nav__overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.nav__mobile {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  width: 250px;
+  max-width: 100%;
+  background-color: #fff;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform linear 0.2s, opacity linear 0.2s;
+}
+
+.nav__mobile-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 3rem;
+  color: var(--primary-color);
+}
+
+.nav__mobile-list {
+  margin-top: 5rem;
+}
+
+.nav__mobile-link {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  padding: 20px 0px;
+  padding: 20px;
+}
+
+#nav__input:checked ~ .nav__overlay {
+  display: block;
+  animation: fadeIn linear 0.2s;
+}
+
+#nav__input:checked ~ .nav__mobile {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 3px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1023px) {
+  .nav__mobile-btn {
+    display: block;
+  }
+  .nav__pc {
+    display: none;
+  }
+}
+
+/* Main slide show */
+
+.slideshow {
+  width: 100%;
+  height: 420px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../img/weed031.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideshow__title {
+  color: white;
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.slideshow__description {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.btn.directions {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.btn.directions:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+/* Main show case */
+.showcase__title {
+  padding: 50px 0px;
+}
+
+.showcase__title_sub {
+  font-size: 2rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.showcase__title_main {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.showcase__detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.showcase__description {
+  width: 100%;
+  flex: 1;
+}
+
+.description__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.description__text {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.button-icon {
+  padding-left: 10px;
+}
+
+.visit,
+.buy-online {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.visit:hover,
+.buy-online:hover {
+  background-color: rgba(117, 179, 37, 0.5);
+}
+
+.showcase__image {
+  width: 100%;
+  flex: 1;
+}
+
+.showcase__img-1 {
+  width: 100%;
+}
+
+/* footer */
+
+.footer {
+  background-color: var(--primary-color);
+  color: white;
+  height: 200px;
+}
+
+.footer__list {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.footer__item {
+  height: 80%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-right: 2px dashed white;
+}
+
+.footer__item:last-child {
+  border-right: none;
+}
+
+.footer__link {
+}
+
+.footer__icon {
+  font-size: 10rem;
+  padding: 10px;
+  border: 2px solid white;
+}
+
+.footer__icon--square {
+  padding: 10px 20px;
+}
+
+.footer__title {
+  padding-top: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+}

@@ -1,0 +1,103 @@
+:root {
+  --text-color: #333;
+  --primary-color: #75b325;
+  --header-height: 140px;
+  --nav-sub-height: 34px;
+  --nav-main-height: calc(var(--header-height) - var(--nav-sub-height));
+  --shortNav-height: 40px;
+  --search-height-mobile: 40px;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+.grid {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.grid.wide {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.btn {
+  width: fit-content;
+  min-width: 150px;
+  height: 34px;
+  border: none;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  padding: 20px;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.6rem;
+  background-color: var(--primary-color);
+}
+/* reset css */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+button {
+  background-color: transparent;
+  color: inherit;
+  border-width: 0;
+  padding: 0;
+  cursor: pointer;
+}
+figure {
+  margin: 0;
+}
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+ul,
+ol,
+dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+p {
+  margin: 0;
+}
+cite {
+  font-style: normal;
+}
+fieldset {
+  border-width: 0;
+  padding: 0;
+  margin: 0;
+}
